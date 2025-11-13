@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenda Coristas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- ===== MENU LATERAL ===== -->
+  <aside>
+    <div>
+      <h2>Coristas</h2>
+      <nav>
+        <ul>
+          <li><!-- ADAPTAR: ícone Home --> Home</li>
+          <li class="ativo">Agenda</li>
+          <li><!-- ADAPTAR: ícone Relatórios --> Relatórios</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="filtros">
+      <p>Filtros inativos</p>
+      <!-- ADAPTAR: substituir por painel de filtros reais -->
+    </div>
+  </aside>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main>
+    <header>
+      <h1>Agenda de Coristas</h1>
+      <button id="btnAdd">+ Criar evento</button>
+    </header>
+    <section class="agenda">
+      <div class="coluna">
+        <h2>Agendados</h2>
+        <ul id="listaAgendados"></ul>
+      </div>
+      <div class="coluna">
+        <h2>Terminados</h2>
+        <ul id="listaTerminados"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== MODAIS ===== -->
+  <div class="modal" id="modalAdd">
+    <div class="modal-content">
+      <h3>Novo Evento</h3>
+      <label>Título:</label>
+      <input type="text" id="tituloAdd" placeholder="Ex: Ensaio de domingo">
+      <label>Data:</label>
+      <input type="date" id="dataAdd">
+      <label>Hora:</label>
+      <input type="time" id="horaAdd">
+      <div class="botoes">
+        <button id="salvarAdd">Salvar</button>
+        <button class="fechar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modalEdit">
+    <div class="modal-content">
+      <h3>Editar Evento</h3>
+      <label>Título:</label>
+      <input type="text" id="tituloEdit">
+      <label>Data:</label>
+      <input type="date" id="dataEdit">
+      <label>Hora:</label>
+      <input type="time" id="horaEdit">
+      <div class="botoes">
+        <button id="salvarEdit">Salvar alterações</button>
+        <button class="fechar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modalConcluir">
+    <div class="modal-content">
+      <h3>Concluir Evento</h3>
+      <p>Deseja marcar este evento como concluído?</p>
+      <div class="botoes">
+        <button id="confirmarConcluir">Sim</button>
+        <button class="fechar">Não</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
